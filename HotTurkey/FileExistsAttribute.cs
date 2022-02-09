@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.IO;
 
-namespace CtActivator
+namespace HotTurkey
 {
 	internal class FileExistsAttribute : ValidationAttribute
 	{

@@ -1,7 +1,15 @@
-# Cold Turkey Blocker Pro Activator
-Activate Cold Turkey Blocker Pro
+# Hot Turkey
+
+Activate the pro version of Cold Turkey Blocker 
+
+# Build
+
+```bash
+dotnet build --configuration Release
+```
 
 # Usage
+
 ```bash
-Cold Turkey Pro v4.x Activator.exe [Cold Turkey Blocker.exe]
+HotTurkey "Cold Turkey Blocker.exe"
 ```

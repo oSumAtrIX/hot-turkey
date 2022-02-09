@@ -5,9 +5,9 @@ using AsmResolver.DotNet;
 using AsmResolver.DotNet.Code.Cil;
 using AsmResolver.PE.DotNet.Cil;
 using Cocona;
-using CtActivator;
+using HotTurkey;
 
-CoconaApp.Run(([Argument(Description = "Cold Turkey Blocker.exe")][FileExists]string file) =>
+CoconaApp.Run(([Argument(Description = "Path to Cold Turkey Blocker executable")][FileExists]string file) =>
 {
 	ModuleDefinition? module = null;
 	
