@@ -21,14 +21,14 @@ CoconaApp.Run(([Argument(Description = "Cold Turkey Blocker.exe")][FileExists]st
 		return;
 	}
 
-	if (module?.Name?.Contains("Cold Turkey Blocker") is bool containsName && containsName)
+	if (module!.Name?.Contains("Cold Turkey Blocker") is bool containsName && !containsName)
 	{	
 		Console.WriteLine("This is not Cold Turkey Blocker.exe. Aborting.");
 		return;
 	}
 
 	TypeDefinition? additionalsType = module?.GetAllTypes()
-		.SingleOrDefault(t => t?.Name == "Additionals");
+		.SingleOrDefault(t => t.Name == "Additional");
 
 	if (additionalsType is null)
 	{
@@ -79,4 +79,7 @@ CoconaApp.Run(([Argument(Description = "Cold Turkey Blocker.exe")][FileExists]st
 	{
 		Console.WriteLine($"Failed to save the file to disk. Try running with administrative permissions.\nDetails: {ex.Message}");
 	}
+	
+	Console.WriteLine("Success. Press enter to exit.");
+	Console.ReadLine();
 });
